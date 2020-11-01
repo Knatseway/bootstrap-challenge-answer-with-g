@@ -1,0 +1,271 @@
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+
+<!--    <meta charset="UTF-8">-->
+<!--    <title>George's answer to the bstrap challenge</title>-->
+
+<!--</head>-->
+<!--<body>-->
+
+
+<!--</body>-->
+<!--</html>-->
+
+<!--1st looke a mockup and break down the solid idea of what you want to accomplish and attacking piece by piece-->
+<!--need a full screen navbar-->
+<!--jumbotron with big leadin text-->
+<!--grey area with image and 2 paragraphs-->
+<!--a card with an image atached with its body-->
+
+<!--look at desktop mockup-->
+<!--similar need a container-->
+<!--navbar with title and 4 links-->
+<!--jumbotron same as smaller mobile images-->
+<!--cards 4 across in ful screen view-->
+
+<!--start on navbar-->
+<!--then hero section-->
+<!--and down the page-->
+
+<!--create an index.html-->
+<!--add to git-->
+<!--add style.css-->
+<!--set up page on the html page-->
+<!--some of the set up was done yesterday so ddc notes and get some of the set up from bootstrap snap challenge-->
+<!--He highlighted meta viewport section through the lilnk through line 8-->
+<!--then script tags around line 13 and put them in bottom of body tag-->
+<!--the body area-->
+<!--first pic taken here-->
+
+<!--in the body area .containertab makes the div class container tab-->
+
+<!--Navigation bar first-->
+<!--goto bs.com documentation find navbar not the full kitchen sing-->
+<!--he needed the one with the four links on the right so he chose the one with 4 links-->
+
+<!--He could use some SVG and add an icon but not yet for now he will choose to type in the word title on line 15-->
+<!--lines 21 22 23 and 24 are the link lines-->
+
+<!--span is for an inline element really good for adding specific info or rules for a specific chunk of text-->
+<!--another pic here for span question-->
+
+<!--if you feel code is getting ugly then choose shift shift and choose reformat code and it willclean up your code-->
+
+<!--another thing when we get closer to react you will see that each attribute gets its ow line especially when there is a lot of stuff going on this is a good idea-->
+<!-- and notice the closing tag is on 24 instead of 23-->
+<!--    pic of sample here-->
+
+<!--I can cal the links anything but for now we will call them 1,2,3 and 4-->
+<!--The active link in a wireframe has a highlight attribute-->
+
+
+<!--IN browser inspect and sources and .js-->
+
+<!--nav bar needs to move links to the right-->
+<!--ml-auto on the navbar class-->
+<!--he could play with this in the devtools too-->
+<!--he used ml auto to force the buttons onto the right of the page-->
+<!--auto margins in bootstrap took links from left to right-->
+<!--this is in the flex  under utilities-->
+<!--bootstrap is built on flexbox  side note-->
+<!--G looked at the dev tools in elements under ml auto mx auto margin left he sees that flex is already there-->
+<!--question could you use justify? or is that superfoulous? G would come to the devtools to see if the flex is being displayed  first-->
+<!--if it is not working look at devtools and in the parent element is displaying lex-->
+
+<!--a nice thing about front end is you can experiment with the mx and mr elements-->
+
+<!--we got the links to the right now we want to work on rounded corners-->
+<!--google search how to tound hnavbar corners in bootstrap-->
+<!--nothing good here so we go straight to the documentation on bootstrap-->
+<!--search borders-->
+<!--we are focused on border radius and adding rounded-->
+<!--we open devtools elements events listeners go into body and expand the-->
+<!--we added rounded in thenav class navbar-expand lg line-->
+<!-- we darkened it to see shape-->
+
+<!--next we go to border color and border border secondary in bootstrap-->
+<!--we get rid of background light-->
+<!--add the border-->
+
+<!--go back to container up top and chek styles in divtools-->
+<!--he is now clicking some of the checkmarks on the left of the code to see what happens if he turns on or off the elements-->
+
+<!--getting ideas he was playing padding left and right-->
+<!--now ading padding x-0in the container px-sm-3 ==$0-->
+<!--ended with md-3-->
+
+<!--G copied over the devtools changes to his code but was not satisfied.  he made a typeo and found it quickly then sitll was not saisfied.-->
+<!--we went to responsive breakpoints in bs-->
+<!--changed container  to container-md px-0-->
+<!--if you want to change to a differnt background color thatn bs has then you can do more advanced css.-->
+<!--primary is blue in bs it is a twitter company-->
+
+<!--G was playing with settig a break point that div was set for the navbar so he will create a ew container-->
+
+<!--Next is jumbotron-->
+<!--he added the spacer in the container py-4-->
+
+<!--went to bs for jumbotron code-->
+<!--pasted it-->
+<!--got rid of the text line with the paragraph-->
+<!-- leaves the my-4 amrgin in-->
+<!--then takes it out fully the whole line of my-4-->
+<!--play with margin before calling it complete-->
+<!--change container to md px-0-->
+<!--decided to look back at the final completion looks good as of now-->
+
+<!--jumbotron done-->
+
+<!--next tackle image and two paragraphs section below jumbotron-->
+<!--changed the jumbotron container to section-->
+<!--he does not want to put a container on the current section because it will align to the left marin above-->
+
+<!--so we use section class="bg-secondary" on line 47-->
+<!--then-->
+<!--.container>.row>.col*2 in emmet  container with child of row and child of 2 collumns-->
+
+<!--58  col-md-3-->
+<!--59 col -md-9    use these to add to 12 the magic number-->
+
+<!--USE RULE OF 12-->
+<!--needed mx auto to make the img and the text line up s the mockup-->
+
+<!--next section-->
+<!--tempted to use cards but buyer beware they are finik-->
+<!--not using today-->
+<!-- we will build our own cards with image and boxes-->
+
+<!--We first used emmit but backed out to use the individual space one at at time-->
+<!--for text  fillerama-->
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+
+
+<div class="container-md px-0">
+    <nav class="border border-secondary rounded navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Title</a>
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-link" href="#">
+                    Link 1
+                </a>
+                <a class="nav-link" href="#">Link 2</a>
+                <a class="nav-link" href="#">Link 3</a>
+                <a class="nav-link" href="#">Link 4</a>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div class="py-5">
+    <section class="container jumbotron">
+        <h1 class="display-4">Hello, world!</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra
+            attention to featured content or information.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </section>
+</div>
+
+<section class="bg-secondary">
+    <div class="container py-4">
+        <div class="row">
+            <div class="col-md-3 py-4">
+                <img class="img-fluid d-block mx-auto" src="http://www.fillmurray.com/250/250"
+                     alt="random image of Bill Murray">
+
+            </div>
+            <div class="col-md-9 py-4">
+                <p>
+                    And yet you haven't said what I told you to say! How can any of us trust you? What are their names?
+                    You lived before you met me?! Fry! Quit doing the right thing, you jerk! Oh dear! She's stuck in an
+                    infinite loop, and he's an idiot! Well, that's love for you.
+                </p>
+                <p>
+                    Oh, all right, I am. But if anything happens to me, tell them I died robbing some old man. Perhaps,
+                    but perhaps your civilization is merely the sewer of an even greater society above you! Man, I'm
+                    sore all over. I feel like I just went ten rounds with mighty Thor.
+                </p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container py-4">
+    <div class="row">
+        <div class="col-md py-4 ">
+            <img class="rounded-circle mx-auto d-block img-fluid mb-4 " src="http://www.fillmurray.com/200/200"
+                 alt="more photos of Bill Murray">
+            <div class="bg-light border border-secondary rounded">
+                <p>You'll have all the Slurm you can drink when you're partying with Slurms McKenzie! And why did 'I'
+                    have to take a cab? Or a guy who burns down a bar for the insurance money!</p>
+            </div>
+        </div>
+
+        <div class="col-md py-4">
+            <img class="rounded-circle mx-auto d-block img-fluid mb-4 " src="http://www.fillmurray.com/200/200"
+                 alt="more photos of Bill Murray">
+            <div class="bg-light border border-secondary rounded">
+                <p>You'll have all the Slurm you can drink when you're partying with Slurms McKenzie! And why did 'I'
+                    have to take a cab? Or a guy who burns down a bar for the insurance money!</p>
+            </div>
+        </div>
+
+        <div class="col-md py-4">
+            <img class="rounded-circle mx-auto d-block img-fluid mb-4 " src="http://www.fillmurray.com/200/200"
+                 alt="more photos of Bill Murray">
+            <div class="bg-light border border-secondary rounded">
+                <p>You'll have all the Slurm you can drink when you're partying with Slurms McKenzie! And why did 'I'
+                    have to take a cab? Or a guy who burns down a bar for the insurance money!</p>
+            </div>
+        </div>
+
+        <div class="col-md py-4">
+            <img class="rounded-circle mx-auto d-block img-fluid mb-4 " src="http://www.fillmurray.com/200/200"
+                 alt="more photos of Bill Murray">
+            <div class="bg-light border border-secondary rounded">
+                <p>You'll have all the Slurm you can drink when you're partying with Slurms McKenzie! And why did 'I'
+                    have to take a cab? Or a guy who burns down a bar for the insurance money!</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer class="py-4 bg-dark text-light text-center mt-4">
+    <small>This opera's as lousy as it is brilliant! Your lyrics lack subtlety. You can't just have your characters
+        announce how they feel.</small>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+</body>
+</html>
